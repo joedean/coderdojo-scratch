@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>Introduction To Scratch</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" media="screen" href="core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/style/web-2.0.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="core/print.css">
+
+  <!-- Required Modernizr file -->
+  <script src="modernizr.custom.js"></script>
+</head>
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides. Just make elements with a class of slide. -->
+    <section id="balloons-game" class="slide">
+      <img src="images/balloons/playing.png"/>
+    </section>
+
+    <section id="sign-in" class="slide">
+      <img src="images/shared/signin.png"/>
+    </section>
+
+    <section id="new-sprite" class="slide">
+      <img src="images/shared/sprite.png"/>
+    </section>
+
+    <section id="sprite-library" class="slide">
+      <img src="images/balloons/sprite_library.png"/>
+    </section>
+
+    <section id="balloon-costumes" class="slide">
+      <img src="images/balloons/costumes.png"/>
+    </section>
+
+    <section id="sounds" class="slide">
+      <img src="images/balloons/sounds.png"/>
+    </section>
+
+    <section id="balloon-scripts" class="slide">
+      <img src="images/balloons/balloons.png"/>
+    </section>
+
+    <section id="new-sprite" class="slide">
+      <img src="images/shared/new_backdrop.png"/>
+    </section>
+
+    <section id="backdrop-library" class="slide">
+      <img src="images/balloons/backdrop_library.png"/>
+    </section>
+
+    <section id="backdrops" class="slide">
+      <img src="images/balloons/backdrops.png"/>
+    </section>
+
+    <section id="backdrop-scripts" class="slide">
+      <img src="images/balloons/stage.png"/>
+    </section>
+
+    <section id="thanks" class="slide">
+      <h2> Thanks </h2>
+      <h3> Thank @onsitedotcom for the food and space </h3>
+      <h3> My Contact Info </h3>
+      <ul>
+        <li> Email: joe.dean@gmail.com </li>
+        <li> Twitter: @joeddean </li>
+      </ul>
+    </section>
+
+    <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
+<script src="jquery.min.js"></script>
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+    $.deck('showGoTo');
+  });
+</script>
+</body>
+</html>
